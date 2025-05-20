@@ -1,0 +1,342 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE RELATÓRIOS === */
+
+/* Container central para tela de relatórios */
+.container.relatorio-box {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: rgb(255, 252, 160);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+body.dark-mode .container.relatorio-box {
+  background-color: #222529 !important; 
+  color: #e8eaed !important; 
+  border: 1px solid #444;
+}
+
+.relatorio-box h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+body.dark-mode .relatorio-box h2 {
+  color: #f5ef32;
+}
+
+.relatorio-box .form-label {
+  font-weight: 500;
+  color: #444;
+}
+
+body.dark-mode .relatorio-box .form-label {
+  color: #e0e0e0;
+}
+
+.relatorio-box .form-control,
+.relatorio-box .form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+}
+
+/* Estilos para os inputs e selects dentro do .relatorio-box no modo escuro */
+body.dark-mode .relatorio-box select.form-select,
+body.dark-mode .relatorio-box input.form-control {
+  background-color: #3a3f44 !important;
+  color: #e8eaed !important;
+  border-color: #54595e !important;
+}
+
+
+/* Botões personalizados */
+.relatorio-box .btn-primary {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  border: none;
+  color: #333;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.relatorio-box .btn-primary:hover {
+  background: linear-gradient(to bottom, #fbf66a, #f5ef32);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.relatorio-box .btn-success {
+  background: linear-gradient(to bottom, #32a852, #4cd66a);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.relatorio-box .btn-success:hover {
+  background: linear-gradient(to bottom, #4cd66a, #32a852);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .relatorio-box .btn-primary {
+  background: linear-gradient(to bottom, #F2B705, #BF8417);
+  color: #fff;
+}
+
+body.dark-mode .relatorio-box .btn-primary:hover {
+  background: linear-gradient(to bottom, #BF8417, #F2B705);
+}
+
+body.dark-mode .relatorio-box .btn-success {
+  background: linear-gradient(to bottom, #2a8c44, #3aaa57);
+}
+
+body.dark-mode .relatorio-box .btn-success:hover {
+  background: linear-gradient(to bottom, #3aaa57, #2a8c44);
+}
+
+
+/* Estilos gerais para select e input */
+select,
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+
+
+/* Área de pré-visualização */
+#preview_area {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+body.dark-mode #preview_area {
+  background-color: #222;
+}
+
+#preview_area h3 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+body.dark-mode #preview_area h3 {
+  color: #f5ef32;
+}
+
+/* Tabela de horários para relatório */
+.div-tabela-responsiva {
+  overflow-x: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .div-tabela-responsiva {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tabela-horario {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.tabela-horario th,
+.tabela-horario td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #e0c700;
+}
+
+.tabela-horario th {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tabela-horario td {
+  background-color: #2a2a2a;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.tabela-horario td:nth-child(1),
+.tabela-horario td:nth-child(2),
+.tabela-horario td:nth-child(3) {
+  background-color: #333;
+  font-weight: 500;
+}
+
+/* Estilo para os itens de alocação dentro das células */
+.alocacao-item {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 8px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.alocacao-item:last-child {
+  margin-bottom: 0;
+}
+
+.alocacao-item strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #f5ef32;
+}
+
+/* Modo escuro para a tabela */
+body.dark-mode .tabela-horario th {
+  background: linear-gradient(to bottom, #F2B705, #BF8417);
+  color: #fff;
+  border-color: #D9A004;
+}
+
+body.dark-mode .tabela-horario td {
+  background-color: #212529;
+  color: #f0f0f0;
+  border-color: #495057;
+}
+
+body.dark-mode .tabela-horario td:nth-child(1),
+body.dark-mode .tabela-horario td:nth-child(2),
+body.dark-mode .tabela-horario td:nth-child(3) {
+  background-color: #2c3034;
+}
+
+body.dark-mode .alocacao-item {
+  background-color: #2c3034;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .alocacao-item strong {
+  color: #F2B705;
+}
+
+/* Estilos para impressão/PDF */
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .tabela-horario {
+    width: 100%;
+    page-break-inside: avoid;
+  }
+  
+  .tabela-horario th {
+    background: #f5ef32 !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .tabela-horario td {
+    background-color: #2a2a2a !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .alocacao-item {
+    background-color: #333 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .alocacao-item strong {
+    color: #f5ef32 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .relatorio-box {
+    padding: 1.5rem;
+  }
+  
+  .relatorio-box .btn-primary,
+  .relatorio-box .btn-success {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .tabela-horario {
+    font-size: 0.8rem;
+  }
+  
+  .tabela-horario th,
+  .tabela-horario td {
+    padding: 8px 10px;
+  }
+  
+  .alocacao-item {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .relatorio-box {
+    padding: 1rem;
+  }
+  
+  .tabela-horario {
+    font-size: 0.7rem;
+  }
+  
+  .tabela-horario th,
+  .tabela-horario td {
+    padding: 6px 8px;
+  }
+  
+  .alocacao-item {
+    padding: 6px;
+  }
+}

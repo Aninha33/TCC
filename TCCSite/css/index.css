@@ -1,0 +1,140 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE LOGIN === */
+
+/* Centralização vertical */
+.vertical-center {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Caixa de login */
+.login-box {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 450px;
+}
+
+body.dark-mode .login-box {
+  background: linear-gradient(to bottom, #3a3a3a, #2e2e2e);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.login-box h4 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+body.dark-mode .login-box h4 {
+  color: #f5ef32;
+}
+
+.login-box .form-label {
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+body.dark-mode .login-box .form-label {
+  color: #e0e0e0;
+}
+
+.login-box .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body.dark-mode .login-box .form-control {
+  background-color: #3a3a3e;
+  border-color: #555;
+  color: #e8eaed;
+}
+
+/* Campo de senha e botão de visualização */
+.senha-container {
+  position: relative;
+  width: 100%;
+}
+
+.senha-input {
+  width: 100%;
+  padding-right: 45px; /* Espaço para o botão */
+  box-sizing: border-box;
+}
+
+.senha-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1.2rem;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+body.dark-mode .senha-toggle {
+  color: #ccc;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+  .login-box {
+    max-width: 90%;
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .login-box {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+  
+  .login-box h4 {
+    font-size: 1.3rem;
+  }
+  
+  .login-box .form-control {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+  
+  .senha-toggle {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+    right: 8px;
+  }
+  
+  .senha-input {
+    padding-right: 50px;
+  }
+  
+  .button {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}

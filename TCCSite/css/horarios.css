@@ -1,0 +1,177 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE GERAR HORÁRIOS === */
+
+/* Grade de cards no menu */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.menu-card {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+  width: 250px;
+  color: black;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-card img {
+  width: 90px;
+  margin-bottom: 1rem;
+  transition: width 0.3s ease;
+}
+
+.menu-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+body.dark-mode .menu-card {
+  background: linear-gradient(to bottom, #F2B705, #BF8417);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+}
+
+/* Tabela de horários */
+.tabela-horario {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0; 
+  margin-top: 2rem;
+  font-size: 0.9rem; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden; 
+}
+
+    /* Ajustes na tabela para usar a paleta de cores do site */
+    .tabela-horario th {
+      background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+      color: #333;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom-color: #e0c700;
+      border-right-color: #e0c700;
+    }
+    
+    .tabela-horario td:nth-child(1),
+    .tabela-horario td:nth-child(2),
+    .tabela-horario td:nth-child(3) {
+      background-color: #fffee6;
+      font-weight: 500;
+      font-size: 0.85rem;
+    }
+
+.tabela-horario th:first-child,
+.tabela-horario td:first-child {
+  border-left: 0; 
+}
+
+.tabela-horario th:last-child,
+.tabela-horario td:last-child {
+  border-right: 0; 
+}
+
+.tabela-horario tr:last-child td {
+  border-bottom: 0; 
+}
+
+.tabela-horario th {
+  background-color: #6c757d; 
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tabela-horario td:nth-child(1),
+.tabela-horario td:nth-child(2),
+.tabela-horario td:nth-child(3) {
+  background-color: #f8f9fa; 
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.tabela-horario .alocacao-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #ffffff; 
+  text-align: left; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tabela-horario .alocacao-item:last-child {
+  margin-bottom: 0;
+}
+
+.tabela-horario .alocacao-item strong {
+  font-weight: 600; 
+  display: block;
+  margin-bottom: 4px;
+}
+
+.tabela-horario td hr {
+  display: none; 
+}
+
+/* Modo Escuro para Tabela */
+body.dark-mode .tabela-horario {
+  box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .tabela-horario th {
+    background: linear-gradient(to bottom, #F2B705, #BF8417);
+    color: #fff;
+    border-bottom-color: #D9A004;
+    border-right-color: #D9A004;
+}
+
+body.dark-mode .tabela-horario td {
+  background-color: #212529; 
+  color: #f0f0f0;
+  border-bottom-color: #495057;
+  border-right-color: #495057;
+}
+
+body.dark-mode .tabela-horario td:nth-child(1),
+body.dark-mode .tabela-horario td:nth-child(2),
+body.dark-mode .tabela-horario td:nth-child(3) {
+  background-color: #2c3034; 
+}
+
+body.dark-mode .tabela-horario .alocacao-item {
+  background-color: #2c3034; 
+  box-shadow: 0 1px 3px rgba(255,255,255,0.03);
+}
+
+
+/* Responsividade para tabela */
+@media screen and (max-width: 768px) {
+  .tabela-horario th,
+  .tabela-horario td {
+    font-size: 0.75rem; 
+    padding: 8px 6px; 
+  }
+  .tabela-horario .alocacao-item {
+    padding: 6px;
+    font-size: 0.7rem;
+  }
+  
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

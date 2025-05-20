@@ -1,0 +1,140 @@
+/* === ESTILOS ESPECÍFICOS PARA A PÁGINA DE GERENCIAR PROFESSORES === */
+
+/* Formulário de professores */
+.form-professores {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  margin: 0 auto;
+  width: 100%;
+}
+
+body.dark-mode .form-professores {
+  background: linear-gradient(to bottom, #3a3a3a, #2e2e2e);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.form-professores h4 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+body.dark-mode .form-professores h4 {
+  color: #f5ef32;
+}
+
+.form-professores .form-label {
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+body.dark-mode .form-professores .form-label {
+  color: #e0e0e0;
+}
+
+.form-professores .form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1.2rem;
+}
+
+body.dark-mode .form-professores .form-control {
+  background-color: #3a3a3e;
+  border-color: #555;
+  color: #e8eaed;
+}
+
+/* Tabela de professores */
+.tabela-professores {
+  background: linear-gradient(to bottom, #fbf66a, #f5ef32);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+body.dark-mode .tabela-professores {
+  background: linear-gradient(to bottom, #2e2e2e, #3a3a3a);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Campo de busca */
+.search-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.search-form {
+  position: relative;
+  display: inline-block;
+}
+
+.search-input {
+  padding: 10px 40px 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 350px;
+}
+
+.search-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  border: none;
+  background: transparent;
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.search-icon {
+  color: #555;
+}
+
+body.dark-mode .search-input {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+/* Container de tabela */
+.table-container {
+  padding: 0 2rem 2rem;
+  overflow-x: auto;
+}
+
+/* Campo de senha e botão de visualização (específico para esta página) */
+.senha-container {
+  position: relative;
+  width: 100%;
+}
+
+.senha-input {
+  width: 100%;
+  padding-right: 40px; /* Espaço para o botão */
+}
+
+.senha-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  font-size: 1.1rem;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark-mode .senha-toggle {
+  color: #ccc;
+}

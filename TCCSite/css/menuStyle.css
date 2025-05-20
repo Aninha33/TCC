@@ -1,0 +1,52 @@
+/* === ESTILOS ESPECÍFICOS PARA O MENU === */
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.menu-card {
+  background: linear-gradient(to bottom, #f5ef32, #fbf66a);
+  border-radius: 25px;
+  padding: 2rem;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: black;
+  text-decoration: none;
+}
+
+.menu-card:hover {
+  transform: scale(1.03);
+}
+
+.menu-card img {
+  transition: width 0.3s ease;
+  width: 90px;
+  margin-bottom: 1rem;
+}
+
+.menu-title {
+  transition: font-size 0.3s ease;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .header, #cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}

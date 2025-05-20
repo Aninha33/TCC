@@ -1,0 +1,275 @@
+/* === ESTILOS COMUNS PARA TODAS AS PÁGINAS === */
+
+/* Base do site */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfdd6;
+  color: #000;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+}
+
+/* Modo escuro aplicado em todo o site */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #ffffff;
+}
+
+/* Cabeçalho / Header */
+.header, #cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem 0 2rem;
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-container a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-container img {
+  width: 80px;
+  transition: transform 0.2s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.05);
+}
+
+.icon-bar {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-bar img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Switch de modo noturno */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider-switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider-switch:before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  border-radius: 50%;
+  background-color: transparent;
+  background-image: url('../imgs/lua.png');
+  background-size: cover;
+  transition: 0.4s;
+}
+
+input:checked + .slider-switch {
+  background-color: #3d3100;
+  /* background-color: #f0d000; */
+}
+
+input:checked + .slider-switch:before {
+  transform: translateX(24px);
+  background-image: url('../imgs/sol.png');
+}
+
+/* Modal de tamanho de fonte */
+#modalFonte {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 350px;
+}
+
+#modalFonte.active {
+  z-index: 1000;
+  display: block;
+}
+
+#modalFonte button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  border: 1px solid black;
+  background-color: transparent;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode #modalFonte {
+  background-color: #2e2e2e;
+  color: #f5f5f5;
+  border: 2px solid #fbf66a;
+}
+
+body.dark-mode #modalFonte button {
+  color: #fbf66a;
+  border-color: #fbf66a;
+}
+
+/* Estilo para botões padrão */
+.button {
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 30px;
+  background: linear-gradient(to bottom, #ffdd00, #F2B705);
+  color: #333;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.button:hover {
+  background: linear-gradient(to right, #F2B705, #ffdd00);
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .button {
+  background: linear-gradient(to right, #b89017, #F2B705);
+  color: white;
+}
+
+/* Botão padrão voltar ao menu */
+.btn-voltar {
+  margin-top: 30px;
+  background: linear-gradient(to right, #f5ef32, #fbf66a);
+  color: #333;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(to right, #fbf66a, #f5ef32);
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .btn-voltar {
+  background: linear-gradient(to right, #F2B705, #BF8417);
+  color: white;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .header, #cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 1rem 1.5rem 0 1.5rem;
+  }
+  
+  .icon-bar {
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+  
+  .icon-bar img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .switch {
+    width: 60px;
+    height: 30px;
+  }
+  
+  .slider-switch:before {
+    height: 24px;
+    width: 24px;
+  }
+  
+  input:checked + .slider-switch:before {
+    transform: translateX(28px);
+  }
+  
+  .button, .btn-voltar {
+    padding: 12px 25px;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header, #cabecalho {
+    padding: 1rem;
+  }
+  
+  .logo-container img {
+    width: 60px;
+  }
+  
+  .logo-container h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Modo escuro para elementos comuns */
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #777;
+}
+
+body.dark-mode input::placeholder {
+  color: #ccc;
+}
+
+body.dark-mode .form-control {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .form-control::placeholder {
+  color: #aaa;
+}
