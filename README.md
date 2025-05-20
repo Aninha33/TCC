@@ -7,9 +7,9 @@ A solução utiliza técnicas de **Pesquisa Operacional** com **Programação Li
 
 📽️ Veja a demonstração rápida da aplicação 
 
-![Demonstração do sistema](./video/demo.gif)
+![Demonstração do sistema](./demo.gif)
 
-
+---
 🌐 Acesse a versão online hospedada em:  
 🔗 [https://tcc.alwaysdata.net/index.php](https://tcc.alwaysdata.net/index.php)
 
