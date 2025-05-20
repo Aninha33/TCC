@@ -1,15 +1,17 @@
 # 📚 Sistema de Otimização de Horários de Aulas — Trabalho de Conclusão de Curso de Engenharia da Computação da UTFPR
 
 Este projeto implementa um sistema completo para **gerar horários otimizados de aulas** para o curso de Engenharia de Computação da UTFPR - Câmpus Apucarana.  
-A solução utiliza técnicas de **Pesquisa Operacional** com **Programação Linear Inteira Mista (PLIM)**, integradas a um ambiente web e banco de dados MySQL.
+A solução utiliza técnicas de **Pesquisa Operacional** com **Programação Linear Inteira Mista (PLIM)**, integradas a um ambiente web e banco de dados MySQL. 
 
 ## 🎥 Demonstração em vídeo
 
-📽️ Veja o funcionamento da aplicação:  
-[Login - Sistema de Horários (MP4)](./video/demonstracao.mp4)
+📽️ Veja a demonstração rápida da aplicação 
 
----
+![Demonstração do sistema](./video/demo.gif)
 
+
+🌐 Acesse a versão online hospedada em:  
+🔗 [https://tcc.alwaysdata.net/index.php](https://tcc.alwaysdata.net/index.php)
 
 ---
 
